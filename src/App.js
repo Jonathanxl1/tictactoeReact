@@ -1,23 +1,25 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App";
+import Square from "./components/square"
 
 function App() {
+  
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div className="first_row" >
+        {Array(3).fill(null).map((ele,idx)=>{
+          return  (<Square className="square" key={idx} >{idx+1}</Square>)
+        })}
+      </div>
+      <div className="second_row">
+      {Array(3).fill(null).map((ele,idx)=>{
+          return  (<Square className="square" key={idx} >{idx+3}</Square>)
+        })}
+      </div>
+      <div className="third_row">
+      {Array(3).fill(null).map((ele,idx)=>{
+          return  (<Square className="square" key={idx} >{idx+6}</Square>)
+        })}
+      </div>
     </div>
   );
 }
