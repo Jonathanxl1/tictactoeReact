@@ -17,7 +17,8 @@ function App() {
       </div>
       <div className="third_row">
       {Array(3).fill(null).map((ele,idx)=>{
-          return  (<Square className="square" key={idx} >{idx+6}</Square>)
+          return  (<Square className="square" key={idx} >{idx+6
+          }</Square>)
         })}
       </div>
     </div>
