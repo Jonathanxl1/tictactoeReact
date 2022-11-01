@@ -1,9 +1,9 @@
 import React from 'react';
 import "./square.css";
 
-export default function Square({children}) {   
+export default function Square(props) {   
     
         return(
-            <div style={{cursor:'pointer',userSelect:'none'}}   className={'square'} >{children}</div>
+            <div onClick={props.onClick} style={{cursor:'pointer',userSelect:'none',height:'180px'}}   className={'square column is-4'} >{props.data}</div>
         );
 }
